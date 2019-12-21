@@ -1,4 +1,6 @@
 import React from 'react';
+import './Button.scss';
+
 
 const Button = (props) => {
   const className = `btn ${props.type}`
@@ -8,5 +10,9 @@ const Button = (props) => {
   );
 }
 
+
+Button.defaultProps = {
+  type: "submit"
+ };
 
 export default Button;

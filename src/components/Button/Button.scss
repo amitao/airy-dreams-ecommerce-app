@@ -1,0 +1,15 @@
+.btn {
+  padding: 1rem 2rem;
+  color: #000;
+  font-size: 1.3rem;
+  border-radius: 10px;
+
+  &.submit {
+    background-color: pink;
+  }
+
+  &.add-to-cart {
+    background-color: purple;
+    color: #fff;
+  }
+}
