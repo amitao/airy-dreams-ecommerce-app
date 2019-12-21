@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import Homepage from '../Homepage/Homepage';
+import Homepage from '../../pages/Homepage/Homepage/Homepage';
 import Button from '../Button/Button';
 
 
