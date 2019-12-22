@@ -8,27 +8,29 @@ class Menu extends Component {
       this.state = {
         categories: [{
           title: 'Clothes',
-          imageUrl:'https://airy-dreams-image.s3.amazonaws.com/dress-airy.jpg',
+          imageUrl:'/dress-airy.jpg',
           id:1,
+          size: 'sm'
         },
         {
           title: 'Pants',
-          imageUrl:'https://airy-dreams-image.s3.amazonaws.com/me-airy-2.jpg',
+          imageUrl:'/me-airy-2.jpg',
           id:2,
+          size: 'lg'
         },
         {
           title: 'Skirts',
-          imageUrl:'https://airy-dreams-image.s3.amazonaws.com/dress-airy.jpg',
+          imageUrl:'/dress-airy.jpg',
           id:3,
         },
         {
           title: 'Shoes',
-          imageUrl:'https://airy-dreams-image.s3.amazonaws.com/me-airy-2.jpg',
+          imageUrl:'/me-airy-2.jpg',
           id:4,
         },
         {
           title: 'Jewelries',
-          imageUrl:'https://airy-dreams-image.s3.amazonaws.com/dress-airy.jpg',
+          imageUrl:'/dress-airy.jpg',
           id:5,
         }
       ]
@@ -38,9 +40,9 @@ class Menu extends Component {
   render() {
     return(
       <div>
-        {this.state.categories.map(({ title, imageUrl, id }) => {
+        {this.state.categories.map(({ title, imageUrl, id, size }) => {
           return (
-            <MenuItem key={id} title={title} img={imageUrl} />
+            <MenuItem key={id} title={title} img={imageUrl} size={size} />
           )
         })
       }

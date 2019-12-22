@@ -1,0 +1,16 @@
+.menu-item {
+  background-position: center;
+  background-size: cover;
+  width:400px;
+  height:500px;
+
+  &.sm {
+    width:200px;
+    height: 500px;
+  }
+
+  &.lg {
+    width:600px;
+    height: 200px;
+  }
+}

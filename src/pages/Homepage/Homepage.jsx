@@ -22,7 +22,7 @@ class Homepage extends Component {
         <Nav />
         <Menu />
         <div className="menu-title">This is the title</div>
-        <div className="menu-item"></div>
+        
         <Button type="add-to-cart" handleSubmit={this.handleSubmit} />
       </div> // end of menu-container
 

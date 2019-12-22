@@ -4,9 +4,13 @@ import './Menu.scss';
 
 // items to shop
 
-const MenuItem = ({ title }) => {
+const MenuItem = ({ title, img, size }) => {
   return (
-    <div className="menu-item">
+    <div style={{
+      backgroundImage:`url(${img})`
+      }} 
+      className={`menu-item ${size}`} 
+      >
       <h2>{title}</h2>
       <p>Shop now</p>
     </div>
