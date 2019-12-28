@@ -5,7 +5,7 @@ import './Homepage.scss';
 import Button from '../../components/Button/Button';
 import Nav from '../../components/Nav/Nav';
 import Menu from '../../components/Menu/Menu';
-
+import Header from '../../components/Header/Header';
 
 
 class Homepage extends Component {
@@ -17,14 +17,18 @@ class Homepage extends Component {
 
   render() {
     return (
+      <div className="container">
 
-      <div className="menu-container">
         <Nav />
-        <Menu />
-        <div className="menu-title">This is the title</div>
+        <Header />
         
-        <Button type="add-to-cart" handleSubmit={this.handleSubmit} />
-      </div> // end of menu-container
+        <div className="inner-wrapper">
+          <Menu />
+          <div className="menu-title">This is the title</div>
+          <Button type="add-to-cart" handleSubmit={this.handleSubmit} />
+        </div>
+
+      </div> // end of container
 
     );
   }

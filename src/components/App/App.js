@@ -6,10 +6,7 @@ import Homepage from '../../pages/Homepage/Homepage';
 
 function App() {
     return (
-      <div className="main-container">
-        Hello world
         <Homepage />
-      </div>
     );
 }
 

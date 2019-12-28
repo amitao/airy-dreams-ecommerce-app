@@ -3,7 +3,7 @@ import './Button.scss';
 
 
 const Button = (props) => {
-  const className = `btn ${props.type}`
+  const className = `btn ${props.type}`;
 
   return (
     <button className={className} onClick={props.handleSubmit}>Add to cart</button>
