@@ -6,13 +6,13 @@ const Button = (props) => {
   const className = `btn ${props.type}`;
 
   return (
-    <button className={className} onClick={props.handleSubmit}>Add to cart</button>
+    <button className={className} onClick={props.handleSubmit}>{props.title}</button>
   );
 }
 
 
 Button.defaultProps = {
-  type: "submit"
+  type: "shop"
  };
 
 export default Button;

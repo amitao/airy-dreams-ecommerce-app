@@ -7,10 +7,11 @@ const Header = (props) => {
 
   return (
     <div className="header-container">
-
+      {props.navbar}
     <div className="headline">
       <h1>Be <span>glam</span> with Airy Dreams.</h1>
       <h3>shop now</h3>
+      {props.button}
     </div>
     </div>
   );
