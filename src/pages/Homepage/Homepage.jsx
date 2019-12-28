@@ -26,11 +26,11 @@ class Homepage extends Component {
   render() {
     return (
       <div className="container">
-        <Header navbar={<Navbar />} 
+        <Header 
+          navbar={<Navbar />} 
           button={<Button type="shop" handleSubmit={this.handleSubmit} title="shop now" />}
         />
         
-
         <div className="inner-wrapper">
           <Menu />
           <div className="menu-title">This is the title</div>
