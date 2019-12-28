@@ -2,10 +2,16 @@ import React from 'react';
 import './Header.scss';
 
 
-const Header = () => {
+const Header = (props) => {
+  const className = `btn ${props.type}`;
+
   return (
     <div className="header-container">
-      "this is a header"
+
+    <div className="headline">
+      <h1>Be <span>glam</span> with Airy Dreams.</h1>
+      <h3>shop now</h3>
+    </div>
     </div>
   );
 }

@@ -3,9 +3,9 @@ import './Homepage.scss';
 
 
 import Button from '../../components/Button/Button';
-import Nav from '../../components/Nav/Nav';
 import Menu from '../../components/Menu/Menu';
 import Header from '../../components/Header/Header';
+import Navbar from '../../components/Nav/Nav';
 
 
 class Homepage extends Component {
@@ -18,10 +18,8 @@ class Homepage extends Component {
   render() {
     return (
       <div className="container">
+        <Header/>
 
-        <Nav />
-        <Header />
-        
         <div className="inner-wrapper">
           <Menu />
           <div className="menu-title">This is the title</div>
