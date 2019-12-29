@@ -13,6 +13,7 @@ const Preview = ({ title, items}) => {
           .map( (item) => {
           return (
             <div key={item.id}>
+              <img src={item.imageUrl} alt="iamge"/>
               {item.name}
             </div>
           )

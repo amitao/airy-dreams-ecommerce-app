@@ -7,37 +7,37 @@ const SHOP_DATA = [
       {
         id: 1,
         name: 'earring loops',
-        imageUrl: '',
+        imageUrl: '/images/thumbnail_300x400.jpg',
         price: 12
       },
       {
         id: 2,
         name: 'earring thin',
-        imageUrl: '',
+        imageUrl: '/images/thumbnail_300x400.jpg',
         price: 8
       },
       {
         id: 3,
         name: 'earrings think',
-        imageUrl: '',
+        imageUrl: '/images/thumbnail_300x400.jpg',
         price: 30
       },
       {
         id: 4,
         name: 'earring studs',
-        imageUrl: '',
+        imageUrl: '/images/thumbnail_300x400.jpg',
         price: 23
       },
       {
         id: 5,
         name: 'earring dangles',
-        imageUrl: '',
+        imageUrl: '/images/thumbnail_300x400.jpg',
         price: 16
       },
       {
         id: 6,
         name: 'earring flower',
-        imageUrl: '',
+        imageUrl: '/images/thumbnail_300x400.jpg',
         price: 34
       }
     

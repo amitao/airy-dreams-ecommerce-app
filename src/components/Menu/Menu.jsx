@@ -9,27 +9,27 @@ class Menu extends Component {
       this.state = {
         categories: [{
           title: 'Clothes',
-          imageUrl:'../../../public/images/lg-thumbnail-01.png',
+          imageUrl:'/images/lg-thumbnail-01.png',
           id:1,
           size: 'lg',
           linkUrl: ''
         },
         {
           title: 'Pants',
-          imageUrl:'/me-airy-2.jpg',
+          imageUrl:'/images/sm-thumbnail_290x300.jpg',
           id:2,
           linkUrl: ''
         },
         {
           title: 'Skirts',
-          imageUrl:'/dress-airy.jpg',
+          imageUrl:'/images/md-thumbnail_479x300.jpg',
           id:3,
           size: 'md',
           linkUrl: ''
         },
         {
           title: 'Shoes',
-          imageUrl:'/me-airy-2.jpg',
+          imageUrl:'/images/md-thumbnail_479x300.jpg',
           id:4,
           size: 'md',
           linkUrl: ''
