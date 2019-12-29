@@ -10,24 +10,28 @@ class Menu extends Component {
           title: 'Clothes',
           imageUrl:'/dress-airy.jpg',
           id:1,
-          size: 'lg'
+          size: 'lg',
+          linkUrl: ''
         },
         {
           title: 'Pants',
           imageUrl:'/me-airy-2.jpg',
           id:2,
+          linkUrl: ''
         },
         {
           title: 'Skirts',
           imageUrl:'/dress-airy.jpg',
           id:3,
-          size: 'md'
+          size: 'md',
+          linkUrl: ''
         },
         {
           title: 'Shoes',
           imageUrl:'/me-airy-2.jpg',
           id:4,
-          size: 'md'
+          size: 'md',
+          linkUrl: ''
         }
       ]
       }
@@ -36,9 +40,12 @@ class Menu extends Component {
   render() {
     return(
       <div className="menu-container">
-        {this.state.categories.map(({ title, imageUrl, id, size }) => {
+
+        {this.state.categories.map(( {id, ...itemsProps} ) => {
           return (
-            <MenuItem key={id} title={title} img={imageUrl} size={size} />
+            // <MenuItem key={id} title={title} img={imageUrl} size={size} />
+            // spread operator
+            <MenuItem key={id} {...itemsProps} />
           )
         })
       }

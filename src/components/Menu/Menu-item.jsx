@@ -1,12 +1,15 @@
 import React from 'react';
 import './Menu.scss';
 
+import { withRouter } from 'react-router-dom';
 
 // items to shop
 
-const MenuItem = ({ title, img, size }) => {
+const MenuItem = ({ title, img, size, history, linkUrl, match }) => {
   return (
     <div 
+    // match and append url to history
+      onClick={ () => history.push(`${match.url}${linkUrl}`)}
       style={{
         backgroundImage:`url(${img})`
       }} 
@@ -20,4 +23,4 @@ const MenuItem = ({ title, img, size }) => {
   );
 }
 
-export default MenuItem;
+export default withRouter(MenuItem);
