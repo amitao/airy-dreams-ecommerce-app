@@ -1,16 +1,18 @@
+@import '../App/App.scss';
+
+
 .btn {
   padding: 1rem 2rem;
-  color: #000;
+  color: inherit;
   font-size: 1.3rem;
   cursor: pointer;
-  border: 1px solid #000;
+  border: 1px solid rgb(122, 122, 122);
 
   &.shop {
-    background-color: yellow;
+    background-color: transparent;
   }
 
   &.add-to-cart {
-    background-color: purple;
-    color: #fff;
+    background-color: $pink;
   }
 }

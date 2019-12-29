@@ -7,7 +7,7 @@ const Nav = () => {
 
     <div className="nav-bar">
       <div className="logo">
-        LOGO
+        <img className="logo-image" src='ad-logo.svg' alt="logo" />
       </div>
       <ul>
         <li>Home</li>
