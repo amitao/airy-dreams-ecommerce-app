@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MenuItem from "../Menu/Menu-item";
 
+
 class Menu extends Component {
 
   constructor() {
@@ -8,7 +9,7 @@ class Menu extends Component {
       this.state = {
         categories: [{
           title: 'Clothes',
-          imageUrl:'/dress-airy.jpg',
+          imageUrl:'../../../public/images/lg-thumbnail-01.png',
           id:1,
           size: 'lg',
           linkUrl: ''

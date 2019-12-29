@@ -5,13 +5,13 @@ import { withRouter } from 'react-router-dom';
 
 // items to shop
 
-const MenuItem = ({ title, img, size, history, linkUrl, match }) => {
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   return (
     <div 
     // match and append url to history
       onClick={ () => history.push(`${match.url}${linkUrl}`)}
       style={{
-        backgroundImage:`url(${img})`
+        backgroundImage:`url(${imageUrl})`
       }} 
       className={`menu-item ${size}`} 
       >
