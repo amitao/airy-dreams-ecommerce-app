@@ -1,6 +1,6 @@
 import React from 'react';
 import './Preview.scss';
-
+import PreviewItem from '../Preview/Preview-item';
 
 const Preview = ({ title, items}) => {
   return(
@@ -10,12 +10,9 @@ const Preview = ({ title, items}) => {
       <div className="item-preview">
         {items
           .filter((item, idx) => idx < 4)
-          .map( (item) => {
+          .map( ({ id, ...otherItemProps }) => {
           return (
-            <div key={item.id}>
-              <img src={item.imageUrl} alt="iamge"/>
-              {item.name}
-            </div>
+            <PreviewItem key={id} { ...otherItemProps} />
           )
         })}
       </div>

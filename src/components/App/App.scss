@@ -16,4 +16,12 @@ html,body{
 body {
   font-size: 1.2rem;
   color: $black;
+  font-family: 'Raleway', sans-serif;
+}
+
+.inner-wrapper {
+  max-width: 1300px;
+  width:100%;
+  margin:0 auto;
+  padding: 3rem 1rem;
 }

@@ -5,7 +5,6 @@ import './Homepage.scss';
 import Button from '../../components/Button/Button';
 import Menu from '../../components/Menu/Menu';
 import Header from '../../components/Header/Header';
-import Navbar from '../../components/Nav/Nav';
 
 
 class Homepage extends Component {
@@ -27,7 +26,6 @@ class Homepage extends Component {
     return (
       <div className="container">
         <Header 
-          navbar={<Navbar />} 
           button={<Button type="shop" handleSubmit={this.handleSubmit} title="shop now" />}
         />
         
