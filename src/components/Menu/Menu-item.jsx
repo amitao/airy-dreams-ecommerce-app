@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   return (
+
     <div 
     // match and append url to history
       onClick={ () => history.push(`${match.url}${linkUrl}`)}
@@ -19,6 +20,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
         <h2>{title}</h2>
         <p>Shop now</p>
       </div>
+
     </div>
   );
 }

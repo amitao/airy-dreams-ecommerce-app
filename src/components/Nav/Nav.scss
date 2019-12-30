@@ -2,13 +2,18 @@
 
 
 .nav-bar {
+  position: fixed;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 2rem;
+
+
   .logo{
     margin: 1rem 0 1rem 2rem;
   }
+
   ul {
     list-style-type: none;
     display: flex;

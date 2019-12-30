@@ -1,4 +1,5 @@
 .header-container {
+  display: flex;
   min-height: 75vh;
   padding: 0 1rem 1rem;
   background: rgb(253,245,245);
@@ -6,8 +7,8 @@
 
   .headline{
     max-width:1100px;
-    margin:0 auto;
-    padding:4rem;
+    margin:auto 0;
+    padding:9rem 4rem 2rem;
 
     h1 {
       font-size:3rem;
