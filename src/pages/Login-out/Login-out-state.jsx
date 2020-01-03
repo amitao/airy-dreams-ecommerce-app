@@ -1,6 +1,8 @@
 import React from 'react';
+import FormInput from '../../components/Form-input/Form-input';
 
 import './Login.scss';
+
 
 class LoginOut extends React.Component {
 
@@ -31,20 +33,24 @@ class LoginOut extends React.Component {
 
         <form onSubmit={this.handleSubmit}>
           <label>Email</label>
-          <input 
+          <FormInput
             type="email" 
             name="email" 
             value={this.state.email} 
-            onChange={this.handleChange}
-            required />
+            handleChange={this.handleChange}
+            required 
+            label="email"
+            />
 
           <label>Password</label>
-          <input 
+          <FormInput 
             type="password" 
             name="password" 
             value={this.state.email} 
-            onChange={this.handleChange}
-            required  />
+            handleChange={this.handleChange}
+            required  
+            label="password"
+            />
           <input type="submit" name="submit" value="Submit" />
         </form>
       </div>
