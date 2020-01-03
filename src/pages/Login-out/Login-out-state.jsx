@@ -1,5 +1,6 @@
 import React from 'react';
 import FormInput from '../../components/Form-input/Form-input';
+import CustomButton from '../../components/Custom-button/Custom-button';
 
 import './Login.scss';
 
@@ -51,7 +52,7 @@ class LoginOut extends React.Component {
             required  
             label="password"
             />
-          <input type="submit" name="submit" value="Submit" />
+          <CustomButton type="submit"> Log in </CustomButton>
         </form>
       </div>
     )
