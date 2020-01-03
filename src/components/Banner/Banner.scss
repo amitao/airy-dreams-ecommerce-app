@@ -2,4 +2,18 @@
   padding: 2rem;
   background: rgb(253,245,245);
   background: linear-gradient(304deg, rgba(248,211,221,1) 0%, rgba(253,245,245,1) 100%);
+
+  h1{
+    margin-bottom:0;
+  }
+
+  h3{
+    margin-top:1rem;
+  }
+  .content {
+    max-width:600px;
+    padding:0;
+    margin: auto auto auto 10rem;
+  }
+
 }
