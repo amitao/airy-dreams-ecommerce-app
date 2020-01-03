@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Login.scss';
+
 class LoginOut extends React.Component {
 
   constructor(props) {
