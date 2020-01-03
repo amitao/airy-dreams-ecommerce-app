@@ -2,21 +2,20 @@ import React from 'react';
 import './Preview.scss';
 import PreviewItem from '../Preview/Preview-item';
 
-const Preview = ({ title, items}) => {
-  return(
+const Preview = ({ title, items }) => {
+  return (
     <div className="preview-container">
-      <h3>{title}</h3>
+        <h3>{title}</h3>
 
-      <div className="item-preview">
-        {items
-          .filter((item, idx) => idx < 4)
-          .map( ({ id, ...otherItemProps }) => {
-          return (
-            <PreviewItem key={id} { ...otherItemProps} />
-          )
-        })}
-      </div>
-
+        <div className="item-preview">
+          {items
+            .filter((item, idx) => idx < 4)
+            .map(({ id, ...otherItemProps }) => {
+              return (
+                <PreviewItem key={id} {...otherItemProps} />
+              )
+            })}
+        </div>
     </div>
   )
 }

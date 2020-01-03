@@ -25,13 +25,13 @@ class Homepage extends Component {
 
   render() {
     return (
-      <div className="container">
+      <React.Fragment>
         <Header 
           button={<Button type="shop" handleSubmit={this.handleSubmit} title="shop now" />}
         />
           <Menu />
           <Banner />
-      </div> // end of container
+      </React.Fragment> 
 
     );
   }

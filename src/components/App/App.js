@@ -10,13 +10,16 @@ import LoginOut from '../../pages/Login-out/Login-out-state';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/shop" component={Shoppage} />
-        <Route path="/log-in" component={LoginOut} />
-      </Switch>
+    <div className="app-container">
+
+        <Navbar />
+
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/shop" component={Shoppage} />
+          <Route path="/log-in" component={LoginOut} />
+        </Switch>
+
     </div>
   );
 }

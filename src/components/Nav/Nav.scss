@@ -1,17 +1,19 @@
 @import '../App/App.scss';
 
 
-.nav-bar {
-  position: fixed;
+.nav-bar-container {
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem 2rem;
+  background-color: #fff;
   
 
   .logo{
-    margin: 1rem 0 1rem 2rem;
+    img {
+      max-width:240px;
+    }
   }
 
   ul {
