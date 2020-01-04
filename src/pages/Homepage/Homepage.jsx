@@ -6,6 +6,7 @@ import Button from '../../components/Button/Button';
 import Menu from '../../components/Menu/Menu';
 import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
+import Subscription from '../../components/Subscription/Subscription';
 
 
 class Homepage extends Component {
@@ -31,8 +32,8 @@ class Homepage extends Component {
         />
           <Menu />
           <Banner />
+          <Subscription />
       </React.Fragment> 
-
     );
   }
 }

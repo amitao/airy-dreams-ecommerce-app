@@ -1,0 +1,17 @@
+@import '../App/App.scss';
+
+.sub-container {
+  background-color: $light_yellow;
+
+  .sub-box {
+    display: flex;
+
+    .item{
+      flex:1;
+    }
+  }
+
+  form {
+    display: flex;
+  }
+}
