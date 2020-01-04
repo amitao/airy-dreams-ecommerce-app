@@ -7,6 +7,7 @@ import Shoppage from '../../pages/Shop/Shoppage';
 import Navbar from '../../components/Nav/Nav';
 import LoginOut from '../../pages/Login-out/Login-out-state';
 import { auth } from '../../firebase/firebase.utils';
+import Footer from '../../components/Footer/Footer';
 
 class App extends React.Component {
 
@@ -45,6 +46,7 @@ class App extends React.Component {
             <Route path="/log-in" component={LoginOut} />
           </Switch>
   
+          <Footer />
       </div>
     );
   }

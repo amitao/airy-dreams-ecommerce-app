@@ -1,0 +1,45 @@
+@import '../App/App.scss';
+
+.footer-container {
+  background-color: $pink;
+  
+  .box {
+    display: flex;
+  
+    .box-item {
+      width:50%;
+  
+      &.footer-logo {
+        .logo-image {
+          max-width:200px;
+        }
+      }
+  
+      &.footer-content {
+        display: flex;
+        justify-content: flex-end;
+    
+        .item{
+          border: none;
+          flex: 1;
+          &:last-of-type{
+            margin-top: 1rem;
+          }
+        }
+    
+      } // end of footer-content
+    }
+  
+    p {
+      margin:0.5rem 0 0;
+    }
+  
+  
+    .fab {
+      font-size: 2rem;
+      padding:.5rem;
+    }
+  }
+}
+
+
