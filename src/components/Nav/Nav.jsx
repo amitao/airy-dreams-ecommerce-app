@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../../firebase/firebase.utils';
 
 import './Nav.scss';
 
 
-const Nav = () => {
+const Nav = ({ currentUser }) => {
   return (
     <div className="nav-bar-container">
       <Link className="logo" to='/'>
@@ -15,6 +16,14 @@ const Nav = () => {
         <li><Link to='/necklace'>Necklace</Link></li>
         <li><Link to='/necklace'>Earrings</Link></li>
         <li><Link to='/necklace'>Bracelets</Link></li>
+        <li>
+          
+            {
+              currentUser ? (<div className="option" onClick={() => auth.signOut()}>Log out</div>) :
+              (<Link className="option" to='/log-in'>Log in</Link>
+              )}
+          
+        </li>
       </ul>
     </div>
 
