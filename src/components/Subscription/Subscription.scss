@@ -7,11 +7,13 @@
     display: flex;
 
     .item{
-      flex:1;
+      // flex:1;
     }
   }
 
   form {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

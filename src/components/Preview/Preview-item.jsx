@@ -7,7 +7,7 @@ const PreviewItem = ({ id, name, price, imageUrl }) => {
 
     <div className="item" key={id}>
 
-      <div className="item-container">
+      <div className="inner-wrapper item-container">
       <div 
       className="image-item"
       style={{

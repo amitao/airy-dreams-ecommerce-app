@@ -54,7 +54,7 @@ class LoginOut extends React.Component {
             label="password"
             />
           <CustomButton type="submit"> Log in </CustomButton>
-          <CustomButton onClick={loginWithGoogle}> Login with google</CustomButton>
+          <CustomButton onClick={loginWithGoogle} isGoogleSignIn> Login with google</CustomButton>
         </form>
       </div>
     )

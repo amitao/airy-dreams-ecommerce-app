@@ -1,7 +1,19 @@
+
+@import '../App/App.scss';
+
 .custom-button {
   padding: 1rem 2rem;
   color: inherit;
+  background-color: transparent;
   font-size: 1.3rem;
   cursor: pointer;
   border: 1px solid rgb(122, 122, 122);
+
+  &:hover {
+    background-color: rgba(226, 224, 224, 0.623);
+  }
+
+  &.google-signin {
+    background-color: $light_pink;
+  }
 }

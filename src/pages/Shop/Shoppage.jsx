@@ -18,7 +18,7 @@ class Shoppage extends Component {
     const {collections} = this.state;
 
     return(
-      <div className="shop-page inner-wrapper"> 
+      <div className="shop-page"> 
         {
           collections.map( ({id, ...otherCollectionProps}) => {
             return (

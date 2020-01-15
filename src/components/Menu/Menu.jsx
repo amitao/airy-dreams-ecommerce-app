@@ -42,7 +42,6 @@ class Menu extends Component {
     return (
       <div className="inner-wrapper">
       <div className="menu-container">
-
           {this.state.categories.map(({ id, ...itemsProps }) => {
             return (
               // <MenuItem key={id} title={title} img={imageUrl} size={size} />
@@ -51,7 +50,7 @@ class Menu extends Component {
             )
           })
           }
-        </div>
+      </div>
       </div>
     );
   }

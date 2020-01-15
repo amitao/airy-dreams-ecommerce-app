@@ -17,7 +17,6 @@ const Nav = ({ currentUser }) => {
         <li><Link to='/necklace'>Earrings</Link></li>
         <li><Link to='/necklace'>Bracelets</Link></li>
         <li>
-          
             {
               currentUser ? (<div className="option" onClick={() => auth.signOut()}>Log out</div>) :
               (<Link className="option" to='/log-in'>Log in</Link>
