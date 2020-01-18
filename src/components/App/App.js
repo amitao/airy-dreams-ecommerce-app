@@ -6,8 +6,9 @@ import Homepage from '../../pages/Homepage/Homepage';
 import Shoppage from '../../pages/Shop/Shoppage';
 import Navbar from '../../components/Nav/Nav';
 import LoginOut from '../../pages/Login-out/Login-out-state';
-import { auth } from '../../firebase/firebase.utils';
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import Footer from '../../components/Footer/Footer';
+
 
 class App extends React.Component {
 
@@ -21,9 +22,11 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged( user => {
-      this.setState({ currentUser: user })
-      console.log(user);
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( async user => {
+      createUserProfileDocument(user);
+      
+      // this.setState({ currentUser: user })
+      // console.log(user);
     })
   }
 
