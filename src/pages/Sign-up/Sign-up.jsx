@@ -19,9 +19,43 @@ class SignUp extends React.Component {
     }
   }
 
+  handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { displayName, email, password, confirmPassword } = this.state;
+
+    if (password === confirmPassword) {
+      alert("password don't match");
+      return;
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(email, password);
+      
+      await createUserProfileDocument(user, { displayName });
+      this.setState({
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      });
+
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({[name]:value});
+  }
+
 
 
   render() {
+
+    const { displayName, email, password, confirmPassword } = this.state;
+
     return (
       <div className="sign-up">
         <h2>I do not have an account</h2>

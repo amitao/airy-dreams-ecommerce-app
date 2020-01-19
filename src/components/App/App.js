@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Homepage from '../../pages/Homepage/Homepage';
 import Shoppage from '../../pages/Shop/Shoppage';
 import Navbar from '../../components/Nav/Nav';
-import LoginOut from '../../pages/Login-out/Login-out-state';
+import LoginOut from '../../pages/Login-signup/Login-signup';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import Footer from '../../components/Footer/Footer';
 
@@ -37,8 +37,7 @@ class App extends React.Component {
           }, () => {
             console.log(this.state);
           });
-        });
-         
+        });   
       } 
         this.setState({currentUser: userAuth}) // set to null user logs out
     });

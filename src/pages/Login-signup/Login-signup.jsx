@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginOut from './Login-out-state';
+import SignUp from '../Sign-up/Sign-up';
 
 import './Login.scss';
 
@@ -7,8 +8,8 @@ import './Login.scss';
 const Login = () => {
   return (
     <div className="login-container">
-      <p>Log in</p>
       <LoginOut />
+      <SignUp />
     </div>
   )
 }
