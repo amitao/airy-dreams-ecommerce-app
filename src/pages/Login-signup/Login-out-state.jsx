@@ -3,7 +3,7 @@ import FormInput from '../../components/Form-input/Form-input';
 import CustomButton from '../../components/Custom-button/Custom-button';
 
 import './Login.scss';
-import { loginWithGoogle } from '../../firebase/firebase.utils';
+import { auth, loginWithGoogle } from '../../firebase/firebase.utils';
 
 
 class LoginOut extends React.Component {
@@ -17,9 +17,20 @@ class LoginOut extends React.Component {
     }
   }
 
-  handleSubmit = (e) => {
+  handleSubmit =async (e) => {
     e.preventDefault();
+
+    const { email, password} = this.state;
+
+    try{
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({email:'', password:''}); // clear state after exceed
+    } catch(err){
+      console.log(err);
+    }
+
     this.setState({ email: '', password: '' })
+
   }
 
   handleChange = (e) => {
@@ -48,7 +59,7 @@ class LoginOut extends React.Component {
           <FormInput 
             type="password" 
             name="password" 
-            value={this.state.email} 
+            value={this.state.password} 
             handleChange={this.handleChange}
             required  
             label="password"

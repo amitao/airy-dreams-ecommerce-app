@@ -24,7 +24,8 @@ class SignUp extends React.Component {
 
     const { displayName, email, password, confirmPassword } = this.state;
 
-    if (password === confirmPassword) {
+    // check if password don't match
+    if (password !== confirmPassword) {
       alert("password don't match");
       return;
     }
