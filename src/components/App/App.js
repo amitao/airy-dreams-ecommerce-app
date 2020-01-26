@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { Route, Switch } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 import Homepage from '../../pages/Homepage/Homepage';
 import Shoppage from '../../pages/Shop/Shoppage';
@@ -8,20 +9,17 @@ import Navbar from '../../components/Nav/Nav';
 import LoginOut from '../../pages/Login-signup/Login-signup';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import Footer from '../../components/Footer/Footer';
+import { setCurrentUser } from '../../redux/user/user.actions';
 
 
 class App extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      currentUser: null
-    }
-  }
 
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    const {setCurrentUser} = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
 
       if(userAuth) {
@@ -29,17 +27,13 @@ class App extends React.Component {
 
         userRef.onSnapshot( snapshot => {
           //create new object data
-          this.setState({
-            currentUser: {
+         setCurrentUser({
               id:snapshot.id,
               ...snapshot.data()
-            }
-          }, () => {
-            console.log(this.state);
           });
         });   
       } 
-        this.setState({currentUser: userAuth}) // set to null user logs out
+      setCurrentUser(userAuth) // set to null user logs out
     });
   }
 
@@ -54,7 +48,7 @@ class App extends React.Component {
     return (
       <div className="app-container">
   
-          <Navbar currentUser={this.state.currentUser}/>
+          <Navbar />
   
           <Switch>
             <Route exact path="/" component={Homepage} />
@@ -68,4 +62,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+export default connect(null, mapDispatchToProps)(App);

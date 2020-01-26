@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils';
+import { connect } from 'react-redux';
+// connect is HOC - higher order component
 
 import './Nav.scss';
 
@@ -20,13 +22,17 @@ const Nav = ({ currentUser }) => {
             {
               currentUser ? (<div className="option" onClick={() => auth.signOut()}>Log out</div>) :
               (<Link className="option" to='/log-in'>Log in</Link>
-              )}
-          
+              )
+            }
         </li>
       </ul>
     </div>
-
-  )
+  );
 }
 
-export default Nav;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser
+});
+
+
+export default connect(mapStateToProps)(Nav);
