@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartIcon from '../Cart/Cart-icon';
+import CartDropdown from '../Cart/Cart-dropdown';
 // connect is HOC - higher order component
 
 import './Nav.scss';
@@ -28,6 +29,7 @@ const Nav = ({ currentUser }) => {
         </li>
         <li> <CartIcon /></li>
       </ul>
+      <CartDropdown />
     </div>
   );
 }
