@@ -9,7 +9,7 @@ import CartDropdown from '../Cart/Cart-dropdown';
 import './Nav.scss';
 
 
-const Nav = ({ currentUser }) => {
+const Nav = ({ currentUser, hidden }) => {
   return (
     <div className="nav-bar-container">
       <Link className="logo" to='/'>
@@ -21,21 +21,23 @@ const Nav = ({ currentUser }) => {
         <li><Link to='/necklace'>Earrings</Link></li>
         <li><Link to='/necklace'>Bracelets</Link></li>
         <li>
-            {
-              currentUser ? (<div className="option" onClick={() => auth.signOut()}>Log out</div>) :
-              (<Link className="option" to='/log-in'>Log in</Link>
-              )
-            }
+          {
+            currentUser ? (<div className="option" onClick={() => auth.signOut()}>Log out</div>) :
+              (<Link className="option" to='/log-in'>Log in</Link>)
+          }
         </li>
         <li> <CartIcon /></li>
       </ul>
-      <CartDropdown />
+      {
+        hidden ? null : <CartDropdown />
+      }
     </div>
   );
 }
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = ({user:{currentUser}, cart:{hidden}}) => ({
+  currentUser,
+  hidden
 });
 
 
