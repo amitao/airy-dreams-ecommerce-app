@@ -5,7 +5,7 @@ import CustomButton from '../Custom-button/Custom-button';
 
 
 const Header = () => {
-  
+  // hook react-router
   let history = useHistory();
 
   return (

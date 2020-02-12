@@ -8,6 +8,8 @@
   font-size: 1.3rem;
   cursor: pointer;
   border: 1px solid rgb(122, 122, 122);
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: rgba(226, 224, 224, 0.623);
@@ -15,5 +17,16 @@
 
   &.google-signin {
     background-color: $light_pink;
+  }
+
+  &.inverted {
+    background-color: black;
+    color: #fff;
+    border: 1px solid #000;
+
+    &:hover {
+      background-color: grey;
+      color: #fff;
+    }
   }
 }
