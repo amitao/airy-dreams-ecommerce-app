@@ -11,9 +11,9 @@ const Preview = ({ title, items }) => {
         {/* this is a comment */}
           {items
             .filter((item, idx) => idx < 4)
-            .map(({ id, ...otherItemProps }) => {
+            .map((item) => {
               return (
-                <PreviewItem key={id} {...otherItemProps} />
+                <PreviewItem key={item.id} item={item} />
               )
             })}
         </div>

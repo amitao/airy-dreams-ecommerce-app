@@ -1,11 +1,14 @@
 import React from 'react';
 import './Preview.scss';
-
+import { connect } from 'react-redux';
+import { addItem } from '../../redux/cart/cart.actions';
 import CustomButton from '../Custom-button/Custom-button';
 
-const PreviewItem = ({ id, name, price, imageUrl }) => {
-  return (
+const PreviewItem = ({ item, addItem }) => {
 
+  const { name, price, imageUrl } = item;
+
+  return (
     <div className="item">
 
       <div className="inner-wrapper item-container">
@@ -15,12 +18,11 @@ const PreviewItem = ({ id, name, price, imageUrl }) => {
             backgroundImage: `url(${imageUrl})`
           }}
         >
-
           <div className="preview-content">
             <p>{name}</p>
             <p>{price}</p>
           </div>
-          <CustomButton inverted>Add to Cart</CustomButton>
+          <CustomButton onClick={()=> addItem(item)} inverted>Add to Cart</CustomButton>
         </div>
       </div>
 
@@ -28,4 +30,8 @@ const PreviewItem = ({ id, name, price, imageUrl }) => {
   )
 }
 
-export default PreviewItem;
+const mapDispatchToProps = dispatch => ({
+  addItem: item => dispatch(addItem(item))
+})
+
+export default connect(null, mapDispatchToProps)(PreviewItem);
